@@ -1,0 +1,150 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 16px;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: #212121;
+    color: #d4d4d4;
+    font-family: 'Poppins', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 12px;
+
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    border-left: 4px solid #007acc;
+    border-radius: 5px;
+}
+
+.cabecalho h1 {
+    margin: 0;
+    color: #007acc;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.cabecalho p {
+    margin: 5px 0 0;
+    color: #b0b0b0;
+    font-size: 13px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    align-content: center;
+
+    gap: 10px;
+    flex: 1;
+    min-height: 0;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: 12px;
+
+    background-color: #252526;
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1 1 calc(20% - 10px);
+    min-width: 0;
+    max-width: 220px;
+
+    margin: 0;
+    padding: 12px;
+
+    background-color: #2d2d30;
+    color: #cccccc;
+
+    border: 1px solid #3e3e42;
+    border-left: 3px solid #007acc;
+    border-radius: 4px;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.card:hover {
+    background-color: #37373d;
+    color: #ffffff;
+    border-color: #007acc;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 10px;
+
+    background-color: #252526;
+    color: #858585;
+
+    border: 1px solid #3c3c3c;
+    border-radius: 5px;
+
+    font-size: 12px;
+    text-align: center;
+}
+
+.rodape p {
+    margin: 0;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 700px) {
+    body {
+        height: auto;
+        min-height: 100vh;
+        overflow: auto;
+        padding: 10px;
+    }
+
+    .container {
+        gap: 8px;
+        padding: 10px;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 8px);
+        max-width: none;
+        min-height: 75px;
+        font-size: 13px;
+    }
+
+    .cabecalho h1 {
+        font-size: 22px;
+    }
+}
