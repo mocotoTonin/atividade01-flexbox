@@ -1,4 +1,4 @@
-Atividade desenvolvida na disciplina de Frameworks Front-end, com o objetivo de praticar os fundamentos do CSS, Box Model e Flexbox.
+Projeto desenvolvido para a Atividade 02 da disciplina de Frameworks Front-end.
 
 ## Tecnologias utilizadas
 
