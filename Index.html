@@ -1,54 +1,160 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Flexbox Lab</title>
+    <title>Netflix | CineFlix</title>
 
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header class="cabecalho">
-        <h1>Flexbox Lab</h1>
-        <p>Estudando CSS, Box Model e Flexbox</p>
+    <!-- CABEÇALHO -->
+    <header class="topo">
+        <h1 class="logo">CINEFLIX</h1>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#filmes">Filmes</a>
+            <a href="#series">Séries</a>
+            <a href="#minha-lista">Minha lista</a>
+        </nav>
     </header>
 
-    <main class="container">
+    <!-- DESTAQUE PRINCIPAL -->
+    <main>
 
-        <div class="card">Elemento 01</div>
-        <div class="card">Elemento 02</div>
-        <div class="card">Elemento 03</div>
-        <div class="card">Elemento 04</div>
-        <div class="card">Elemento 05</div>
+        <section class="banner">
 
-        <div class="card">Elemento 06</div>
-        <div class="card">Elemento 07</div>
-        <div class="card">Elemento 08</div>
-        <div class="card">Elemento 09</div>
-        <div class="card">Elemento 10</div>
+            <div class="banner-conteudo">
 
-        <div class="card">Elemento 11</div>
-        <div class="card">Elemento 12</div>
-        <div class="card">Elemento 13</div>
-        <div class="card">Elemento 14</div>
-        <div class="card">Elemento 15</div>
+                <span class="categoria">FILME ORIGINAL CINEFLIX</span>
 
-        <div class="card">Elemento 16</div>
-        <div class="card">Elemento 17</div>
-        <div class="card">Elemento 18</div>
-        <div class="card">Elemento 19</div>
-        <div class="card">Elemento 20</div>
+                <h2>A ÚLTIMA FRONTEIRA</h2>
+
+                <p class="descricao">
+                    Em um mundo dominado por tempestades,
+                    uma exploradora embarca em uma jornada
+                    para encontrar uma cidade esquecida.
+                    O destino da humanidade está em suas mãos.
+                </p>
+
+                <div class="botoes">
+                    <button class="assistir">▶ Assistir</button>
+
+                    <button class="informacoes">
+                        ⓘ Mais informações
+                    </button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- FILMES EM ALTA -->
+        <section class="catalogo" id="filmes">
+
+            <h2>Filmes em alta</h2>
+
+            <div class="lista-filmes">
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=500&h=750&fit=crop"
+                        alt="Paisagem noturna de uma cidade fictícia">
+
+                    <h3>Noite Sem Fim</h3>
+                    <p>Suspense • 2026</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&h=750&fit=crop"
+                        alt="Paisagem natural do filme fictício Mundo Selvagem">
+
+                    <h3>Mundo Selvagem</h3>
+                    <p>Aventura • 2026</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?w=500&h=750&fit=crop"
+                        alt="Cena cinematográfica de um filme">
+
+                    <h3>Última Sessão</h3>
+                    <p>Drama • 2025</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&h=750&fit=crop"
+                        alt="Montanhas de um mundo fictício">
+
+                    <h3>Além das Montanhas</h3>
+                    <p>Fantasia • 2026</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=500&h=750&fit=crop"
+                        alt="Sala de cinema">
+
+                    <h3>O Último Filme</h3>
+                    <p>Suspense • 2025</p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- SÉRIES -->
+        <section class="catalogo" id="series">
+
+            <h2>Séries para você</h2>
+
+            <div class="lista-filmes">
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=500&h=750&fit=crop"
+                        alt="Cidade à noite">
+
+                    <h3>Cidade Sombria</h3>
+                    <p>2 temporadas</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=500&h=750&fit=crop"
+                        alt="Paisagem de aventura">
+
+                    <h3>Terra Perdida</h3>
+                    <p>1 temporada</p>
+                </article>
+
+                <article class="filme">
+                    <img
+                        src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=500&h=750&fit=crop"
+                        alt="Montanhas">
+
+                    <h3>O Reino</h3>
+                    <p>3 temporadas</p>
+                </article>
+
+            </div>
+
+        </section>
 
     </main>
 
-    <footer class="rodape">
-        <p>Atividade 01 - Frameworks Front-end</p>
+    <footer id="minha-lista">
+        <p>© 2026 CineFlix — Projeto acadêmico de Front-End.</p>
+        <p>Interface fictícia para fins educacionais.</p>
     </footer>
 
 </body>
-
 </html>

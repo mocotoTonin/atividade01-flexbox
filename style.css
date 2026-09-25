@@ -1,150 +1,223 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+/* CONFIGURAÇÕES GERAIS */
 
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 16px;
-    height: 100vh;
-    overflow: hidden;
-
-    background-color: #212121;
-    color: #d4d4d4;
+    background-color: #141414;
+    color: white;
     font-family: 'Poppins', sans-serif;
-
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
 }
 
-.cabecalho {
+
+/* CABEÇALHO */
+
+.topo {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    flex-shrink: 0;
 
-    margin: 0;
-    padding: 12px;
+    background-color: #080808;
 
-    background-color: #252526;
-    border: 1px solid #3c3c3c;
-    border-left: 4px solid #007acc;
-    border-radius: 5px;
+    padding: 20px 5%;
 }
 
-.cabecalho h1 {
-    margin: 0;
-    color: #007acc;
-    font-size: 26px;
-    font-weight: 700;
+.logo {
+    color: #e50914;
+    font-size: 28px;
+    font-weight: 800;
 }
 
-.cabecalho p {
-    margin: 5px 0 0;
-    color: #b0b0b0;
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+
+/* BANNER */
+
+.banner {
+    min-height: 450px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 50px 5%;
+
+    background-image:
+        linear-gradient(
+            to right,
+            #000 0%,
+            rgba(0, 0, 0, 0.8) 40%,
+            rgba(0, 0, 0, 0.2) 100%
+        ),
+        url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=1600&h=900&fit=crop");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.banner-conteudo {
+    max-width: 550px;
+}
+
+.categoria {
+    color: #e50914;
     font-size: 13px;
+    font-weight: bold;
 }
 
-.container {
+.banner h2 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.descricao {
+    color: #ddd;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* BOTÕES */
+
+.botoes {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    align-content: center;
-
     gap: 10px;
-    flex: 1;
-    min-height: 0;
-    width: 100%;
-
-    margin: 0 auto;
-    padding: 12px;
-
-    background-color: #252526;
-    border: 1px solid #3c3c3c;
-    border-radius: 5px;
 }
 
-.card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    flex: 1 1 calc(20% - 10px);
-    min-width: 0;
-    max-width: 220px;
-
-    margin: 0;
-    padding: 12px;
-
-    background-color: #2d2d30;
-    color: #cccccc;
-
-    border: 1px solid #3e3e42;
-    border-left: 3px solid #007acc;
+button {
+    border: none;
+    padding: 13px 22px;
     border-radius: 4px;
 
     font-size: 14px;
-    font-weight: 600;
-    text-align: center;
+    font-weight: bold;
+
+    cursor: pointer;
 }
 
-.card:hover {
-    background-color: #37373d;
-    color: #ffffff;
-    border-color: #007acc;
+.assistir {
+    background-color: white;
+    color: black;
 }
 
-.rodape {
+.assistir:hover {
+    background-color: #ccc;
+}
+
+.informacoes {
+    background-color: #555;
+    color: white;
+}
+
+.informacoes:hover {
+    background-color: #777;
+}
+
+
+/* CATÁLOGO */
+
+.catalogo {
+    padding: 25px 5%;
+}
+
+.catalogo h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.lista-filmes {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
+    flex-wrap: wrap;
+    gap: 18px;
+}
 
-    margin: 0;
-    padding: 10px;
+.filme {
+    width: 170px;
+    cursor: pointer;
+}
 
-    background-color: #252526;
-    color: #858585;
+.filme img {
+    width: 100%;
+    height: 250px;
 
-    border: 1px solid #3c3c3c;
+    object-fit: cover;
+
     border-radius: 5px;
+}
 
+.filme h3 {
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+.filme p {
+    color: #aaa;
     font-size: 12px;
-    text-align: center;
 }
 
-.rodape p {
-    margin: 0;
+
+/* RODAPÉ */
+
+footer {
+    padding: 40px 5%;
+    color: #777;
+    font-size: 12px;
 }
+
 
 /* RESPONSIVIDADE */
+
 @media (max-width: 700px) {
-    body {
-        height: auto;
-        min-height: 100vh;
-        overflow: auto;
-        padding: 10px;
+
+    .topo {
+        flex-direction: column;
+        gap: 15px;
     }
 
-    .container {
-        gap: 8px;
-        padding: 10px;
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    .card {
-        flex: 1 1 calc(50% - 8px);
-        max-width: none;
-        min-height: 75px;
+    .banner {
+        min-height: 400px;
+        padding: 30px 5%;
+    }
+
+    .banner h2 {
+        font-size: 30px;
+    }
+
+    .descricao {
         font-size: 13px;
     }
 
-    .cabecalho h1 {
-        font-size: 22px;
+    .lista-filmes {
+        gap: 12px;
+    }
+
+    .filme {
+        width: calc(50% - 6px);
+    }
+
+    .filme img {
+        height: 230px;
     }
 }
